@@ -1,11 +1,13 @@
 package com.bridgelabz;
 
 import org.junit.jupiter.api.Test;
+
 import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.stream.IntStream;
+
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class NIOFileAPITest {
@@ -29,8 +31,10 @@ public class NIOFileAPITest {
         IntStream.range(1, 10).forEach(cntr -> {
             Path tempFile = Paths.get(playPath + "/temp" + cntr);
             assertTrue(Files.notExists(tempFile));
-            try{ Files.createFile(tempFile);}
-            catch (IOException e){}
+            try {
+                Files.createFile(tempFile);
+            } catch (IOException e) {
+            }
             assertTrue(Files.exists(tempFile));
         });
         Files.list(playPath).filter(Files::isRegularFile).forEach(System.out::println);
@@ -39,8 +43,8 @@ public class NIOFileAPITest {
     }
 
     @Test
-    void givenDirectoryWhenWatchedListsAllTheActivities()throws IOException {
-        Path dir = Paths.get(HOME+"/"+PLAY_WITH_NIO);
+    void givenDirectoryWhenWatchedListsAllTheActivities() throws IOException {
+        Path dir = Paths.get(HOME + "/" + PLAY_WITH_NIO);
         Files.list(dir).filter(Files::isRegularFile).forEach(System.out::println);
         new Java8WatchServiceExample(dir).processEvents();
     }

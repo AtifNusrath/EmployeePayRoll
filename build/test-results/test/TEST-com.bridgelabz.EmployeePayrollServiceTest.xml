@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-19T08:58:48" hostname="MOHAMMED-DANISH" time="0.369">
+<testsuite name="com.bridgelabz.EmployeePayrollServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-10-19T10:30:34" hostname="MOHAMMED-DANISH" time="0.696">
   <properties/>
-  <testcase name="given3EmployeesWhenWrittenToFileShouldMatchEmployeeEntries()" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.369"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="given3EmployeesWhenWrittenToFileShouldMatchEmployeeEntries()" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.611"/>
+  <testcase name="givenFileOnReadingFromFile()" classname="com.bridgelabz.EmployeePayrollServiceTest" time="0.048"/>
+  <system-out><![CDATA[EmployeePayrollData{id=1, name='Jeff', salary=1000000.0}
+EmployeePayrollData{id=2, name='Jeff', salary=2000000.0}
+EmployeePayrollData{id=3, name='Jeff', salary=3000000.0}
+EmployeePayrollData{id=1, name='Jeff', salary=1000000.0}
+EmployeePayrollData{id=2, name='Jeff', salary=2000000.0}
+EmployeePayrollData{id=3, name='Jeff', salary=3000000.0}
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
