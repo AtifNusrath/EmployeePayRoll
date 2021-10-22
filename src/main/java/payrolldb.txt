@@ -1,0 +1,41 @@
+CREATE DATABASE payroll;
+
+USE payroll;
+
+CREATE TABLE payroll
+(id int NOT NULL AUTO_INCREMENT,
+name varchar(50) NOT NULL,
+salary double NOT NULL,
+start DATE NOT NULL,
+PRIMARY KEY(id));
+
+INSERT INTO payroll (name,salary, start) VALUES
+('BILL', 1000000.00, '2018-01-03'),
+('Mark', 2000000.00, '2019-11-13'),
+('Charlie', 3000000.00, '2020-05-21');
+
+SELECT * from payroll;
+
+SELECT salary from payroll where name = 'BILL';
+
+DELETE from payroll where name= 'BILL';
+SELECT * from payroll;
+
+INSERT INTO payroll (name,salary, start) VALUES
+('BILL', 1000000.00, '2018-01-03');
+
+SELECT * from payroll where start between cast('2018-01-01' as date) and date(now());
+
+alter table payroll add gender char(1) after name;
+
+update payroll set gender = 'M' where name = 'BILL' or name = 'Charlie';
+update payroll set gender = 'F' where name = 'Mark';
+
+select sum(salary) from payroll where gender = 'F' group by gender;
+select avg(salary) from payroll where gender = 'M' group by gender;
+select min(salary) from payroll where gender = 'M' group by gender;
+select max(salary) from payroll where gender = 'M' group by gender;
+
+
+
+
