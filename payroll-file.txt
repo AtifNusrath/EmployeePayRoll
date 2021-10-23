@@ -1,3 +1,0 @@
-EmployeePayrollData{id=1, name='Jeff', salary=1000000.0}
-EmployeePayrollData{id=2, name='Jeff', salary=2000000.0}
-EmployeePayrollData{id=3, name='Jeff', salary=3000000.0}
